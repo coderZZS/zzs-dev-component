@@ -1,0 +1,54 @@
+{
+    "name": "zzs-dev-component",
+    "private": true,
+    "version": "1.0.0",
+    "description": "组件库",
+    "main": "dist/zzs-dev-component.umd.js",
+    "module": "dist/zzs-dev-component.esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview",
+        "build:lib": "npm run clean && npm run build:umd && npm run build:esm",
+        "build:umd": "rollup --config build/rollup.umd.config.js",
+        "build:esm": "rollup --config build/rollup.esm.config.js",
+        "clean": "rimraf ./dist"
+    },
+    "dependencies": {
+        "lodash-es": "^4.17.21",
+        "zzs-dev-component": "1.0.0"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.25"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^14.1.0",
+        "@types/lodash-es": "^4.17.6",
+        "@types/node": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.29.0",
+        "@typescript-eslint/parser": "^5.29.0",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "@vitejs/plugin-vue-jsx": "^1.3.10",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "@vue/eslint-config-typescript": "^11.0.0",
+        "autoprefixer": "^10.4.7",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^8.18.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^9.1.1",
+        "postcss": "^8.4.14",
+        "prettier": "^2.7.1",
+        "rimraf": "^3.0.2",
+        "rollup-plugin-css-only": "^3.1.0",
+        "rollup-plugin-typescript2": "^0.34.0",
+        "rollup-plugin-vue": "^6.0.0",
+        "sass": "^1.52.3",
+        "sass-loader": "^13.0.0",
+        "tailwindcss": "^3.1.4",
+        "typescript": "^4.5.4",
+        "vite": "^2.9.9",
+        "vue": "^3.2.25",
+        "vue-tsc": "^0.34.7"
+    }
+}
