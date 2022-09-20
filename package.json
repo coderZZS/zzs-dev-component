@@ -13,15 +13,17 @@
         "vue3"
     ],
     "scripts": {
+        "lint": "eslint",
         "dev": "vite",
         "build:vite": "vue-tsc --noEmit && vite build",
-        "test": "vitest",
+        "test": "vitest run",
         "preview": "vite preview",
         "build:lib": "npm run clean && npm run build:umd && npm run build:esm",
         "build:umd": "rollup --config build/rollup.umd.config.js",
         "build:esm": "rollup --config build/rollup.esm.config.js",
         "clean": "rimraf ./dist",
-        "prepublishOnly": "npm run build:lib"
+        "prepublishOnly": "npm run build:lib",
+        "prepare": "husky install"
     },
     "files": [
         "dist"
@@ -49,6 +51,7 @@
         "eslint": "^8.18.0",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-vue": "^9.1.1",
+        "husky": "^8.0.1",
         "jsdom": "^20.0.0",
         "postcss": "^8.4.14",
         "prettier": "^2.7.1",
