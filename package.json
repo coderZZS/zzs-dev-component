@@ -6,6 +6,12 @@
     "main": "dist/zzs-dev-component.umd.js",
     "module": "dist/zzs-dev-component.esm.js",
     "types": "dist/index.d.ts",
+    "license": "MIT",
+    "keywords": [
+        "component",
+        "ui",
+        "vue3"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
@@ -15,6 +21,9 @@
         "build:esm": "rollup --config build/rollup.esm.config.js",
         "clean": "rimraf ./dist"
     },
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "lodash-es": "^4.17.21",
         "zzs-dev-component": "1.0.0"
