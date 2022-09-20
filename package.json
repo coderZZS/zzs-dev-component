@@ -1,7 +1,7 @@
 {
     "name": "zzs-dev-component",
     "private": false,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "组件库",
     "main": "dist/zzs-dev-component.umd.js",
     "module": "dist/zzs-dev-component.esm.js",
